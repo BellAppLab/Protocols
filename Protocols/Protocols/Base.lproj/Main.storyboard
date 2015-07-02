@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UEg-d8-Qdb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--No Generics-->
+        <scene sceneID="sA5-U1-Llv">
+            <objects>
+                <viewController id="Z9O-Le-Ipb" customClass="ViewControllerNoGenerics" customModule="Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gFY-FQ-5HK"/>
+                        <viewControllerLayoutGuide type="bottom" id="88e-4l-WLQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xEj-Nv-6dC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-dO-2Sp">
+                                <rect key="frame" x="180" y="238" width="240" height="124"/>
+                                <state key="normal" title="Show Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPhotos" destination="Z9O-Le-Ipb" eventType="touchUpInside" id="fJh-dx-QvR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mgi-dO-2Sp" secondAttribute="centerY" id="1Uf-Jd-DBE"/>
+                            <constraint firstAttribute="centerX" secondItem="mgi-dO-2Sp" secondAttribute="centerX" id="Oja-8c-VO0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="No Generics" id="4gH-Au-uqV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLV-mW-gOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="610"/>
+        </scene>
+        <!--With Generics-->
+        <scene sceneID="UtS-58-SQw">
+            <objects>
+                <viewController id="STL-qu-IsF" customClass="ViewControllerWithGenerics" customModule="Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Km-wt-ArH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ytq-zR-THy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zVL-VK-qvv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qab-Mg-FTF">
+                                <rect key="frame" x="180" y="238" width="240" height="124"/>
+                                <state key="normal" title="Show Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPhotos" destination="STL-qu-IsF" eventType="touchUpInside" id="caC-ei-VGN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="qab-Mg-FTF" secondAttribute="centerY" id="L7Z-Pe-0tm"/>
+                            <constraint firstAttribute="centerX" secondItem="qab-Mg-FTF" secondAttribute="centerX" id="dY4-3c-cHg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="With Generics" id="WhY-KF-hit"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1u5-5G-0dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-52"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rag-Ti-dyV">
+            <objects>
+                <tabBarController id="UEg-d8-Qdb" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nKy-CZ-sGK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="STL-qu-IsF" kind="relationship" relationship="viewControllers" id="Gvj-0l-2OJ"/>
+                        <segue destination="Z9O-Le-Ipb" kind="relationship" relationship="viewControllers" id="rqK-hP-buh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjt-Wu-iGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="279"/>
+        </scene>
+    </scenes>
+</document>
